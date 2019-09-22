@@ -11,6 +11,8 @@
 
 <?php
 
+/*
+
 echo "<h1>hello world</h1>";
 
 $a= "susant";
@@ -43,8 +45,9 @@ echo "<h1>$multi[3]</h1>";
 $frind= array('susant'=>23,'sayantanu'=>21,'arijit'=>21);
 print_r($frind);
 echo "<br/>";
+foreach($frind as $dusman);
 
-echo $frind["susant"];
+echo $dusman."<br>";
 
 
 #for loop
@@ -54,6 +57,31 @@ for($i=1;$i<=100;$i+=5){
 
     echo $i."<br>";
 }
+
+
+
+*/
+
+if (!empty($_SERVER['HTTP_CLIENT_IP'])){
+
+$ip_address= $_SERVER['HTTP_CLIENT_IP'];
+}
+elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+     $ip_address=$_SERVER['HTTP_X_FORWARDED_FOR'];
+}
+else{
+    $ip_address=$_SERVER['REMOTE_ADDR'];
+}
+echo $ip_address;
+
+
+
+
+
+
+
+
+
 ?>
     
 </body>
